@@ -12,6 +12,11 @@
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script>
+        window.api.receive("fromMain", (data, data2) => {
+            console.log(`Received ${data} from main process and ${data2}`);
+        });
+        window.api.send("toMain", "some data");
+    </script>
 </body>
 </html>
