@@ -5,6 +5,10 @@
     <title>KLM GOMS Calculator</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../node_modules/codemirror/lib/codemirror.css"/>
+    <!--Link themes like below to use them in editor.js-->
+    <!--<link rel="stylesheet" href="../../node_modules/codemirror/theme/ayu-dark.css"/>-->
+    <link rel="stylesheet" href="../styles/index.css"/>
 </head>
 <body>
 
@@ -85,13 +89,14 @@
     </div>
 
     <div class="m-4">
-        <h1>This is where the document to write on will be</h1>
+        <textarea id="editor" class="w-100" autocorrect="off" autocapitalize="none" spellcheck="false" wrap="off"></textarea>
     </div>
 
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../scripts/change_theme.js"></script>
+    <script src="../../node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="../scripts/editor.js"></script>
     <!--
     <script>
         window.api.receive("fromMain", (data, data2) => {

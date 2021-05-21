@@ -1,0 +1,6 @@
+
+.CodeMirror {
+    height: calc( 100vh - 180px );
+    outline: currentColor none medium;
+    font-size: 24px;
+}
