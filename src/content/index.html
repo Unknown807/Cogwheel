@@ -2,21 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>KLM GOMS Calculator</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
-<body style="background: white;">
-    <h1>Hello World!</h1>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">
+                <svg width="32" height="32">
+                    <use href="../styles/icons/bootstrap-icons.svg#people"/>
+                </svg>
+                Cognitive Calculator
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#file-earmark-plus"/>
+                            </svg>
+                            New File
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#file-earmark-arrow-up"/>
+                            </svg>
+                            Open File
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#file-earmark-post"/>
+                            </svg>
+                            Save File
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#gear"/>
+                            </svg>
+                            Settings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#info-circle"/>
+                            </svg>
+                            Help
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Hello World!</h1>
+    </div>
 
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--
     <script>
         window.api.receive("fromMain", (data, data2) => {
             console.log(`Received ${data} from main process and ${data2}`);
         });
         window.api.send("toMain", "some data");
     </script>
+    -->
 </body>
 </html>
