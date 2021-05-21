@@ -4,3 +4,19 @@
     outline: currentColor none medium;
     font-size: 24px;
 }
+
+.cm-comment {
+    color:grey;
+}
+
+.cm-mental-load {
+    color: green;
+}
+
+.cm-time-load {
+    color: blueviolet;
+}
+
+.cm-task {
+    color: red;
+}
