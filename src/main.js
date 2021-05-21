@@ -1,4 +1,4 @@
-const { app, ipcMain, BrowserWindow } = require('electron')
+const { app, ipcMain, BrowserWindow, nativeTheme } = require('electron')
 const path = require('path')
 
 let win;
@@ -33,6 +33,16 @@ ipcMain.on("toMain", (event, args) => {
   let respObj2 = "Hello World There";
   win.webContents.send("fromMain", respObj, respObj2); 
 });
+
+ipcMain.handle("dark-mode:toggle", () => {
+  if (nativeTheme.shouldUseDarkColors) {
+    nativeTheme.themeSource = "light";
+  } else {
+    nativeTheme.themeSource = "dark";
+  }
+
+  return nativeTheme.shouldUseDarkColors;
+})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
