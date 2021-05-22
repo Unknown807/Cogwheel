@@ -1,5 +1,6 @@
-const { app, ipcMain, BrowserWindow, nativeTheme } = require('electron')
+const { app, ipcMain, BrowserWindow } = require('electron')
 const path = require('path')
+const fs = require("fs");
 
 let win;
 
@@ -16,7 +17,7 @@ function createWindow () {
   })
 
   win.loadFile(path.join(__dirname, '/content/index.html'));
-}
+};
 
 app.whenReady().then(() => {
   createWindow()
@@ -26,26 +27,21 @@ app.whenReady().then(() => {
       createWindow()
     }
   })
-})
-
-ipcMain.on("toMain", (event, args) => {
-  let respObj = "I am a response object";
-  let respObj2 = "Hello World There";
-  win.webContents.send("fromMain", respObj, respObj2); 
 });
 
-ipcMain.handle("dark-mode:toggle", () => {
-  if (nativeTheme.shouldUseDarkColors) {
-    nativeTheme.themeSource = "light";
+ipcMain.on("saveCurrentFile", (event, filename, data) => {
+  if (filename.trim() == "") {
+    win.webContents.send("fileSaveFailure");
   } else {
-    nativeTheme.themeSource = "dark";
+    try {
+      fs.writeFileSync(filename+".txt", data, "utf-8");
+      win.webContents.send("fileSaveSuccess", filename);
+    } catch(e) {
+      win.webContents.send("fileSaveFailure");
+    }
   }
-
-  return nativeTheme.shouldUseDarkColors;
-})
+});
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
+  app.quit()
+});

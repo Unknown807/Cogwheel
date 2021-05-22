@@ -5,6 +5,10 @@
     font-size: 18px;
 }
 
+li > span {
+    cursor: pointer;
+}
+
 .cm-comment {
     color:grey;
 }
