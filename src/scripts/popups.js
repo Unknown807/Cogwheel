@@ -6,7 +6,7 @@ function formatErrorModal(title, msg) {
 }
 
 window.api.receive("fileSaveFailure", () => {
-    $("#filenameInput").addClass("is-invalid");
+    $("#filename-input").addClass("is-invalid");
     formatErrorModal(
         "Error Saving File",
         "There was an error in saving the current file, make sure to only use letters and numbers."
@@ -14,5 +14,5 @@ window.api.receive("fileSaveFailure", () => {
 });
 
 window.api.receive("fileSaveSuccess", () => {
-    $("#filenameInput").removeClass("is-invalid");
+    $("#filename-input").removeClass("is-invalid");
 });

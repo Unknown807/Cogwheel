@@ -98,7 +98,7 @@
                     </li>
                 
                     <li class="nav-item">
-                        <span class="nav-link" onclick="saveCurrentFile();">
+                        <span id="save-file-button" class="nav-link" onclick="saveCurrentFile();">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#file-earmark-post"/>
                             </svg>
@@ -131,7 +131,7 @@
 
     <div class="m-4 row">
         <div class="col-3">
-            <input id="filenameInput" type="text" class="form-control" placeholder="Filename Here"/>
+            <input id="filename-input" type="text" class="form-control" placeholder="Filename Here"/>
         </div>
         <div class="col-2">
             <svg width="32" height="32">
@@ -160,5 +160,6 @@
     <script src="../scripts/editor.js"></script>
     <script src="../scripts/popups.js"></script>
     <script src="../scripts/file_utils.js"></script>
+    <script src="../scripts/editor_parser.js"></script>
 </body>
 </html>
