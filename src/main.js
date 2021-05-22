@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require("fs");
 
 let win;
+let currentFilePath = __dirname;
 
 function createWindow () {
   win = new BrowserWindow({
@@ -34,13 +35,30 @@ ipcMain.on("saveCurrentFile", (event, filename, data) => {
     win.webContents.send("fileSaveFailure");
   } else {
     try {
-      fs.writeFileSync(filename+".txt", data, "utf-8");
+      fs.writeFileSync(path.join(currentFilePath, filename+".txt"), data, "utf-8");
       win.webContents.send("fileSaveSuccess", filename);
-    } catch(e) {
+    } catch(err) {
       win.webContents.send("fileSaveFailure");
     }
   }
 });
+
+ipcMain.on("openFile", (event, filepathAndname) => {
+  try {
+    let filepath = path.dirname(filepathAndname);
+    let filename = path.basename(filepathAndname, ".txt");
+    const data = fs.readFileSync(filepathAndname, "utf-8");
+
+    currentFilePath = filepath;
+    win.webContents.send("openFileSuccess", filename, data);
+  } catch(err) {
+    win.webContents.send("openFileFailure");
+  }
+});
+
+ipcMain.on("resetCurrentFilePath", (event,) => {
+  currentFilePath = __dirname;
+})
 
 app.on('window-all-closed', () => {
   app.quit()

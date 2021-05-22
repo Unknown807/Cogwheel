@@ -41,7 +41,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button id="new-file-modal-button" onclick="" class="btn btn-primary" data-bs-dismiss="modal">Create</button>
+                    <button id="new-file-modal-button" onclick="createNewFile();" class="btn btn-primary" data-bs-dismiss="modal">Create</button>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button id="open-file-modal-button" onclick="" class="btn btn-primary" data-bs-dismiss="modal">Open</button>
+                    <button id="open-file-modal-button" onclick="openFile();" class="btn btn-primary" data-bs-dismiss="modal">Open</button>
                 </div>
             </div>
         </div>
@@ -151,12 +151,14 @@
         <textarea id="editor" class="w-100" autocorrect="off" autocapitalize="none" spellcheck="false"></textarea>
     </div>
 
+    <input id="open-file-input" type="file"/>
+
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../../node_modules/codemirror/lib/codemirror.js"></script>
     <script src="../scripts/editor.js"></script>
-    <script src="../scripts/file_utils.js"></script>
     <script src="../scripts/popups.js"></script>
+    <script src="../scripts/file_utils.js"></script>
 </body>
 </html>

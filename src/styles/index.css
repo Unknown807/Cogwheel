@@ -5,6 +5,10 @@
     font-size: 18px;
 }
 
+#open-file-input {
+    display: none;
+}
+
 li > span {
     cursor: pointer;
 }

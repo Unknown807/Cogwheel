@@ -3,13 +3,15 @@ const { contextBridge, ipcRenderer } = require("electron");
 contextBridge.exposeInMainWorld(
   "api", {
     send: (channel, ...data) => {
-      let validChannels = ["saveCurrentFile", "fileSaveSuccess", "fileSaveFailure"];
+      let validChannels = ["saveCurrentFile", "openFile",
+                          "resetCurrentFilePath"];
       if (validChannels.includes(channel)) {
         ipcRenderer.send(channel, ...data);
       }
     },
     receive: (channel, func) => {
-      let validChannels = ["fileSaveSuccess", "fileSaveFailure"];
+      let validChannels = ["fileSaveSuccess", "fileSaveFailure",
+                          "openFileSuccess", "openFileFailure"];
       if (validChannels.includes(channel)) {
         ipcRenderer.on(channel, (event, ...args) => func(...args));
       }
