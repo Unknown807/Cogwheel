@@ -3,7 +3,7 @@ let keywords = [
     //Motor
     "click", "hands","point", "type", "write",
     //Cognitive
-    "confirm", "think", "read", "ignore", "remember", "store",
+    "confirm", "think", "read", "forget", "remember", "store",
     //Perceptual
     "look", "hear", "say", "search",
     //System Response
