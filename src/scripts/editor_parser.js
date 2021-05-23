@@ -54,7 +54,7 @@ function calculate_resources(content) {
             cog = parseInt(cog[0].split(" ")[0].replace("[", ""));
 
             if (line.toLowerCase().includes("forget")) {
-                total_chunks -= cog;
+                temp_chunks = 0;
             } else {
                 temp_chunks += cog;
             }
