@@ -50,7 +50,7 @@
                 <hr />
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
-                        <a class="nav-link fs-6">
+                        <a href="#motor-fragment" class="nav-link fs-6">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#hand-index"/>
                             </svg>
@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-6">
+                        <a href="#cognitive-fragment" class="nav-link fs-6">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#lightning"/>
                             </svg>
@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-6">
+                        <a href="#perceptual-fragment" class="nav-link fs-6">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#eye"/>
                             </svg>
@@ -74,7 +74,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-6">
+                        <a href="#other-fragment" class="nav-link fs-6">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#columns-gap"/>
                             </svg>
@@ -82,18 +82,126 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-6">
+                        <a href="#themes-fragment" class="nav-link fs-6">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#palette"/>
                             </svg>
-                            Theme
+                            Themes
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div id="settings-box" class="col-10">
-                
+                <div>
+                    <a name="motor-fragment" class="link-dark text-decoration-none fs-2">Motor Keywords</a>
+                    <hr />
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 g-5">
+                            <div class="col">
+                                <label class="form-text fs-5" for="click-input">Click</label>
+                                <input id="click-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="hands-input">Hands</label>
+                                <input id="hands-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="point-input">Point</label>
+                                <input id="point-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="type-input">Type</label>
+                                <input id="type-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="write-input">Write</label>
+                                <input id="write-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <a name="cognitive-fragment" class="link-dark text-decoration-none fs-2">Cognitive Keywords</a>
+                    <hr />
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 g-5">
+                            <div class="col">
+                                <label class="form-text fs-5" for="confirm-input">Confirm</label>
+                                <input id="confirm-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="think-input">Think</label>
+                                <input id="think-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="read-input">Read</label>
+                                <input id="read-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="forget-input">Forget</label>
+                                <input id="forget-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="remember-input">Remember</label>
+                                <input id="remember-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="store-input">Store</label>
+                                <input id="store-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <a name="perceptual-fragment" class="link-dark text-decoration-none fs-2">Perceptual Keywords</a>
+                    <hr />
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 g-5">
+                            <div class="col">
+                                <label class="form-text fs-5" for="look-input">Look</label>
+                                <input id="look-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="hear-input">Hear</label>
+                                <input id="hear-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="say-input">Say</label>
+                                <input id="say-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-text fs-5" for="search-input">Search</label>
+                                <input id="search-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <a name="other-fragment" class="link-dark text-decoration-none fs-2">Other Keywords</a>
+                    <hr />
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 g-5">
+                            <div class="col">
+                                <label class="form-text fs-5" for="response-input">System Response</label>
+                                <input id="response-input" type="text" class="form-control" placeholder="Default Time Here"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <a name="themes-fragment" class="link-dark text-decoration-none fs-2">Themes</a>
+                    <hr />
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 g-5">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -101,6 +209,7 @@
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/populate_settings.js"></script>
 
 </body>
 </html>

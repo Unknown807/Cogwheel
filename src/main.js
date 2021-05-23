@@ -5,6 +5,17 @@ const fs = require("fs");
 let win;
 let currentFilePath = __dirname;
 
+const systemTaskDefaults = [
+  //Motor - click, hands, point, type, write
+  0.2, 0.4, 1.1, 0.2, 1.0,
+  //Cognitive - confirm, think, read, forget, remember, store
+  1.2, 1.2, 0.25, 0, 0.5, 0.5,
+  //Perceptual - look, hear, say, search
+  0.5, 0.4, 0.4, 1.2,
+  //System Response - response
+  1,
+];
+
 function createWindow () {
   win = new BrowserWindow({
     width: 1200,
