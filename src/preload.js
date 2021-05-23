@@ -5,7 +5,8 @@ contextBridge.exposeInMainWorld(
     send: (channel, ...data) => {
       let validChannels = [
         "saveCurrentFile", "openFile",
-        "resetCurrentFilePath"
+        "resetCurrentFilePath", "requestSettings",
+        "saveSettings"
       ];
       if (validChannels.includes(channel)) {
         ipcRenderer.send(channel, ...data);
@@ -14,7 +15,8 @@ contextBridge.exposeInMainWorld(
     receive: (channel, func) => {
       let validChannels = [
         "fileSaveSuccess", "fileSaveFailure",
-        "openFileSuccess", "openFileFailure"
+        "openFileSuccess", "openFileFailure",
+        "receiveSettings"
       ];
       if (validChannels.includes(channel)) {
         ipcRenderer.on(channel, (event, ...args) => func(...args));

@@ -9,6 +9,6 @@
     height: calc( 100vh - 66px );
 }
 
-li > a {
+#back-button {
     cursor: pointer;
 }

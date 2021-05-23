@@ -5,7 +5,7 @@ const fs = require("fs");
 let win;
 let currentFilePath = __dirname;
 
-const systemTaskDefaults = [
+const defaultSettings = [
   //Motor - click, hands, point, type, write
   0.2, 0.4, 1.1, 0.2, 1.0,
   //Cognitive - confirm, think, read, forget, remember, store
@@ -67,9 +67,38 @@ ipcMain.on("openFile", (event, filepathAndname) => {
   }
 });
 
-ipcMain.on("resetCurrentFilePath", (event,) => {
+ipcMain.on("resetCurrentFilePath", (event) => {
   currentFilePath = __dirname;
 })
+
+ipcMain.on("requestSettings", (event) => {
+  let settings_file = path.join(__dirname, "settings.txt");
+  let data = defaultSettings;
+
+  if (fs.existsSync(settings_file)) {
+    data = fs.readFileSync(settings_file, "utf-8");
+    data = data.split("\n")
+
+    let theme = data[16];
+    data = data.slice(0, 16).map(Number);
+
+    data.push(theme);
+  }
+
+  win.webContents.send("receiveSettings", data);
+});
+
+ipcMain.on("saveSettings", (event, settings) => {
+  let data = "";
+
+  for (i=0; i<16; i++) {
+    let time = parseFloat(settings[i]);
+    time = isNaN(time) ? defaultSettings[i] : time;
+    data += time+"\n";
+  }
+
+  fs.writeFileSync(path.join(__dirname, "settings.txt"), data, "utf-8");
+});
 
 app.on('window-all-closed', () => {
   app.quit()
