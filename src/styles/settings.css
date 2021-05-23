@@ -1,0 +1,14 @@
+
+#settings-box {
+    height: calc( 100vh - 66px );
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#settings-sidebar {
+    height: calc( 100vh - 66px );
+}
+
+li > a {
+    cursor: pointer;
+}

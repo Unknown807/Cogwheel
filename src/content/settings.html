@@ -5,6 +5,7 @@
     <title>Cogwheel - Simple Cognitive Calculator</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../styles/settings.css"/>
 </head>
 <body>
 
@@ -36,8 +37,65 @@
         </div>
     </nav>
 
-    <div class="m-4">
-        <h1>This is where the settings will be</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="settings-sidebar" class="col-2 d-flex flex-column flex-shrink-0 bg-light">
+                <hr />
+                <a class="text-center link-dark text-decoration-none">
+                    <svg width="32" height="32">
+                        <use href="../styles/icons/bootstrap-icons.svg#gear"/>
+                    </svg>
+                    <span class="fs-4">Settings</span>
+                </a>
+                <hr />
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#hand-index"/>
+                            </svg>
+                            Motor
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#lightning"/>
+                            </svg>
+                            Cognitive
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#eye"/>
+                            </svg>
+                            Perceptual
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#columns-gap"/>
+                            </svg>
+                            Other
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#palette"/>
+                            </svg>
+                            Theme
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="settings-box" class="col-10">
+                
+            </div>
+        </div>
     </div>
 
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
