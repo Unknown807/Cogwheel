@@ -14,6 +14,8 @@ const defaultSettings = [
   0.5, 0.4, 0.4, 1.2,
   //System Response - response
   1,
+  //Theme
+  "light"
 ];
 
 function createWindow () {
@@ -83,6 +85,7 @@ ipcMain.on("requestSettings", (event) => {
     data = data.slice(0, 16).map(Number);
 
     data.push(theme);
+    console.log(theme);
   }
 
   win.webContents.send("receiveSettings", data);
@@ -96,6 +99,8 @@ ipcMain.on("saveSettings", (event, settings) => {
     time = isNaN(time) ? defaultSettings[i] : time;
     data += time+"\n";
   }
+
+  data += settings[16];
 
   fs.writeFileSync(path.join(__dirname, "settings.txt"), data, "utf-8");
 });

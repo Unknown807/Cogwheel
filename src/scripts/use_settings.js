@@ -6,4 +6,5 @@ $(window).on("load", () => {
 
 window.api.receive("receiveSettings", (arr) => {
     taskTimes = arr.slice(0, 16);
+    //set Theme here
 });

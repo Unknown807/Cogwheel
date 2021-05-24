@@ -193,12 +193,18 @@
                     </div>
                 </div>
 
-                <div class="mt-5">
+                <div class="mt-5 mb-5">
                     <a name="themes-fragment" class="link-dark text-decoration-none fs-2">Themes</a>
                     <hr />
                     <div class="container-fluid">
                         <div class="row row-cols-3 g-5">
-
+                            <div class="col">
+                                <button class="btn btn-primary" id="light-mode-toggle">Light</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-outline-primary" id="dark-mode-toggle">Dark</button>
+                            </div>
+                            <!--More theme buttons go here-->
                         </div>
                     </div>
                 </div>
@@ -209,7 +215,9 @@
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/change_theme.js"></script>
     <script src="../scripts/populate_settings.js"></script>
+    <script src="../scripts/save_settings.js"></script>
 
 </body>
 </html>
