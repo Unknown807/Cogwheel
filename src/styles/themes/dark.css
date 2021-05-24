@@ -1,0 +1,9 @@
+
+.dark {
+    --color-font: white;
+    --color-font-hover: #e0e0e0;
+
+    --color-bg: #1E2228;
+    --color-container: #22272E;
+    --color-border: #6d6d6d;
+}

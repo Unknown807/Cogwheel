@@ -6,5 +6,7 @@ $(window).on("load", () => {
 
 window.api.receive("receiveSettings", (arr) => {
     taskTimes = arr.slice(0, 16);
-    //set Theme here
+    document.documentElement.className = arr[16];
+    codemirror_editor.setOption("theme", arr[16]);
+
 });

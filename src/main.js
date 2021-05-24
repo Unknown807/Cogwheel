@@ -85,7 +85,6 @@ ipcMain.on("requestSettings", (event) => {
     data = data.slice(0, 16).map(Number);
 
     data.push(theme);
-    console.log(theme);
   }
 
   win.webContents.send("receiveSettings", data);

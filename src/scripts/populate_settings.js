@@ -13,5 +13,5 @@ window.api.receive("receiveSettings", (arr) => {
     for (i=0; i<16; i++) {
         $(`#${inputs[i]}-input`).val(arr[i]);
     }
-    // Set theme area as well
+    setTheme(arr[16]);
 });

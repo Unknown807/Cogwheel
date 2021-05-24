@@ -5,26 +5,31 @@
     <title>Cogwheel - Simple Cognitive Calculator</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../styles/themes/theme.css"/>
     <link rel="stylesheet" href="../styles/settings.css"/>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="theme-container navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <span class="navbar-brand">
+            <span class="navbar-brand theme-font">
                 <svg width="32" height="32">
                     <use href="../styles/icons/bootstrap-icons.svg#people"/>
                 </svg>
                 Cognitive Calculator
             </span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler theme-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="theme-font">
+                    <svg width="32" height="32">
+                        <use href="../styles/icons/bootstrap-icons.svg#list"/>
+                    </svg>
+                </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <span id="back-button" class="nav-link">
+                        <span id="back-button" class="nav-link theme-font">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#arrow-left-circle"/>
                             </svg>
@@ -39,15 +44,15 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div id="settings-sidebar" class="col-2 d-flex flex-column flex-shrink-0 bg-light">
-                <hr />
-                <a class="text-center link-dark text-decoration-none">
+            <div id="settings-sidebar" class="theme-container col-2 d-flex flex-column flex-shrink-0">
+                <hr class="theme-font"/>
+                <a class="theme-font text-center link-dark text-decoration-none">
                     <svg width="32" height="32">
                         <use href="../styles/icons/bootstrap-icons.svg#gear"/>
                     </svg>
                     <span class="fs-4">Settings</span>
                 </a>
-                <hr />
+                <hr class="theme-font"/>
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
                         <a href="#motor-fragment" class="nav-link fs-6">
@@ -94,28 +99,28 @@
 
             <div id="settings-box" class="col-10">
                 <div>
-                    <a name="motor-fragment" class="link-dark text-decoration-none fs-2">Motor Keywords</a>
-                    <hr />
+                    <a name="motor-fragment" class="theme-font link-dark text-decoration-none fs-2">Motor</a>
+                    <hr class="theme-font"/>
                     <div class="container-fluid">
                         <div class="row row-cols-3 g-5">
                             <div class="col">
-                                <label class="form-text fs-5" for="click-input">Click</label>
+                                <label class="theme-font form-text fs-5" for="click-input">Click</label>
                                 <input id="click-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="hands-input">Hands</label>
+                                <label class="theme-font form-text fs-5" for="hands-input">Hands</label>
                                 <input id="hands-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="point-input">Point</label>
+                                <label class="theme-font form-text fs-5" for="point-input">Point</label>
                                 <input id="point-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="type-input">Type</label>
+                                <label class="theme-font form-text fs-5" for="type-input">Type</label>
                                 <input id="type-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="write-input">Write</label>
+                                <label class="theme-font form-text fs-5" for="write-input">Write</label>
                                 <input id="write-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                         </div>
@@ -123,32 +128,32 @@
                 </div>
 
                 <div class="mt-5">
-                    <a name="cognitive-fragment" class="link-dark text-decoration-none fs-2">Cognitive Keywords</a>
-                    <hr />
+                    <a name="cognitive-fragment" class="theme-font link-dark text-decoration-none fs-2">Cognitive</a>
+                    <hr class="theme-font"/>
                     <div class="container-fluid">
                         <div class="row row-cols-3 g-5">
                             <div class="col">
-                                <label class="form-text fs-5" for="confirm-input">Confirm</label>
+                                <label class="theme-font form-text fs-5" for="confirm-input">Confirm</label>
                                 <input id="confirm-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="think-input">Think</label>
+                                <label class="theme-font form-text fs-5" for="think-input">Think</label>
                                 <input id="think-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="read-input">Read</label>
+                                <label class="theme-font form-text fs-5" for="read-input">Read</label>
                                 <input id="read-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="forget-input">Forget</label>
+                                <label class="theme-font form-text fs-5" for="forget-input">Forget</label>
                                 <input id="forget-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="remember-input">Remember</label>
+                                <label class="theme-font form-text fs-5" for="remember-input">Remember</label>
                                 <input id="remember-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="store-input">Store</label>
+                                <label class="theme-font form-text fs-5" for="store-input">Store</label>
                                 <input id="store-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                         </div>
@@ -156,24 +161,24 @@
                 </div>
 
                 <div class="mt-5">
-                    <a name="perceptual-fragment" class="link-dark text-decoration-none fs-2">Perceptual Keywords</a>
-                    <hr />
+                    <a name="perceptual-fragment" class="theme-font link-dark text-decoration-none fs-2">Perceptual</a>
+                    <hr class="theme-font"/>
                     <div class="container-fluid">
                         <div class="row row-cols-3 g-5">
                             <div class="col">
-                                <label class="form-text fs-5" for="look-input">Look</label>
+                                <label class="theme-font form-text fs-5" for="look-input">Look</label>
                                 <input id="look-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="hear-input">Hear</label>
+                                <label class="theme-font form-text fs-5" for="hear-input">Hear</label>
                                 <input id="hear-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="say-input">Say</label>
+                                <label class="theme-font form-text fs-5" for="say-input">Say</label>
                                 <input id="say-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                             <div class="col">
-                                <label class="form-text fs-5" for="search-input">Search</label>
+                                <label class="theme-font form-text fs-5" for="search-input">Search</label>
                                 <input id="search-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                         </div>
@@ -181,12 +186,12 @@
                 </div>
 
                 <div class="mt-5">
-                    <a name="other-fragment" class="link-dark text-decoration-none fs-2">Other Keywords</a>
-                    <hr />
+                    <a name="other-fragment" class="theme-font link-dark text-decoration-none fs-2">Other</a>
+                    <hr class="theme-font"/>
                     <div class="container-fluid">
                         <div class="row row-cols-3 g-5">
                             <div class="col">
-                                <label class="form-text fs-5" for="response-input">System Response</label>
+                                <label class="theme-font form-text fs-5" for="response-input">System Response</label>
                                 <input id="response-input" type="text" class="form-control" placeholder="Default Time Here"/>
                             </div>
                         </div>
@@ -194,8 +199,8 @@
                 </div>
 
                 <div class="mt-5 mb-5">
-                    <a name="themes-fragment" class="link-dark text-decoration-none fs-2">Themes</a>
-                    <hr />
+                    <a name="themes-fragment" class="theme-font link-dark text-decoration-none fs-2">Themes</a>
+                    <hr class="theme-font"/>
                     <div class="container-fluid">
                         <div class="row row-cols-3 g-5">
                             <div class="col">

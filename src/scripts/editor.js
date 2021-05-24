@@ -11,8 +11,8 @@ let keywords = [
 ];
 
 let symbols = [
-    "(", ")", "mental-load",
-    "[", "]", "time-load",
+    "(", ")", "time-load",
+    "[", "]", "mental-load",
     "<", ">",  "task-amount",
 ];
 
@@ -67,7 +67,7 @@ CodeMirror.defineMode("mymode", () => {
 
 let editor = $("#editor")[0];
 
-let codemirror_editor = CodeMirror.fromTextArea(editor, {
+codemirror_editor = CodeMirror.fromTextArea(editor, {
     lineNumbers: true,
     mode: "mymode",
 });

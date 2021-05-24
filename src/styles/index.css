@@ -12,23 +12,3 @@
 li > span {
     cursor: pointer;
 }
-
-.cm-comment {
-    color:grey;
-}
-
-.cm-mental-load {
-    color: green;
-}
-
-.cm-time-load {
-    color: blueviolet;
-}
-
-.cm-task-amount {
-    color: turquoise;
-}
-
-.cm-task {
-    color: red;
-}

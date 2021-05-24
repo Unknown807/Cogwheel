@@ -1,0 +1,24 @@
+@import url("light.css");
+@import url("dark.css");
+
+body {
+    background-color: var(--color-bg);
+}
+
+.theme-container {
+    background-color: var(--color-container);
+    color: var(--color-font);
+}
+
+.theme-border {
+    color: var(--color-border) !important;
+}
+
+.theme-font {
+    color: var(--color-font) !important;
+}
+
+.theme-font:hover {
+    transition: 0.5s;
+    color: var(--color-font-hover) !important;
+}

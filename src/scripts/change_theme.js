@@ -17,6 +17,7 @@ function setTheme(newTheme) {
     newToggle.addClass("btn-primary");
 
     currentTheme = newTheme;
+    document.documentElement.className = newTheme;
 }
 
 $("#light-mode-toggle").on("click", () => {
