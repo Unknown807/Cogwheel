@@ -1,7 +1,14 @@
+let inputs = [
+    "click", "hands", "point", "type",
+    "write", "confirm", "think", "read",
+    "forget", "remember", "store", "look",
+    "hear", "say", "search", "response",
+];
 
 let time_load_regex = /\(\d+\s(s|ms|second|seconds|millisecond|milliseconds)\)/iu;
 let mental_load_regex = /\[\d+\s(chunk|chunks)\]/iu;
 let task_amount_regex = /<\d+>/iu;
+let keyword_regex = new RegExp(`(?<!\\w)(${inputs.join("|")})(?!\\w)`, "iu");
 
 function replace_multiline_comments(content) {
     let newContent = content.split("");
@@ -34,21 +41,31 @@ function calculate_resources(content) {
     for (i=0; i<lines.length; i++) {
         let line = lines[i];
         
+        let task = line.match(keyword_regex);
+        if (task == null) {
+            continue;
+        }
+
+        task = inputs.indexOf(task[0].toLowerCase());
+
         let time = line.match(time_load_regex);
         let cog = line.match(mental_load_regex);
         let amt = line.match(task_amount_regex);
         amt = (amt != null) ? parseInt(amt[0].replace("<", "").replace(">", "")) : 1;
 
+        let duration;
         if (time != null) {
             let time_type = time[1];
-            let duration = parseFloat(time[0].split(" ")[0].replace("(", ""));
+            duration = parseFloat(time[0].split(" ")[0].replace("(", ""));
 
             if (time_type.startsWith("m")) {
                 duration /= 1000;
             }
-
-            total_time += (duration*amt);
+        } else {
+            duration = taskTimes[task];
         }
+
+        total_time += (duration*amt);
 
         if (cog != null) {
             cog = parseInt(cog[0].split(" ")[0].replace("[", ""));
@@ -66,6 +83,9 @@ function calculate_resources(content) {
         }
 
     }
+
+    total_time = total_time.toFixed(4).replace(/(\d)0+$/, '$1');
+    total_time = (total_time == "0.0") ? "0" : total_time;
 
     return [total_time, total_chunks];
 }
