@@ -6,7 +6,7 @@ contextBridge.exposeInMainWorld(
       let validChannels = [
         "saveCurrentFile", "openFile",
         "resetCurrentFilePath", "requestSettings",
-        "saveSettings"
+        "saveSettings", "saveEditorContent",
       ];
       if (validChannels.includes(channel)) {
         ipcRenderer.send(channel, ...data);
@@ -16,7 +16,7 @@ contextBridge.exposeInMainWorld(
       let validChannels = [
         "fileSaveSuccess", "fileSaveFailure",
         "openFileSuccess", "openFileFailure",
-        "receiveSettings"
+        "receiveSettings",
       ];
       if (validChannels.includes(channel)) {
         ipcRenderer.on(channel, (event, ...args) => func(...args));

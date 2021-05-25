@@ -9,6 +9,8 @@
     display: none;
 }
 
+#settings-button,
+#help-button,
 li > span {
     cursor: pointer;
 }
