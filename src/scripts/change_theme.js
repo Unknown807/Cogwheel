@@ -29,3 +29,7 @@ $("#bliss-mode-toggle").on("click", () => {
 $("#mdn-like-mode-toggle").on("click", () => {
     setTheme("mdn-like");
 });
+
+$("#golden-mode-toggle").on("click", () => {
+    setTheme("golden");
+});

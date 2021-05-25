@@ -2,6 +2,7 @@
 @import url("dark.css");
 @import url("bliss.css");
 @import url("mdn-like.css");
+@import url("golden.css");
 
 body {
     background-color: var(--color-bg);

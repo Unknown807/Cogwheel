@@ -1,0 +1,126 @@
+/*
+    Using Codemirror's Abbott theme for editor
+*/
+
+/* Equivalent to Vim's Normal group. */
+.cm-s-golden.CodeMirror {
+    background: #231c14 /* bistre */;
+    color: #d8ff84 /* pastel_chartreuse */;
+}
+
+/* Roughly equivalent to Vim's LineNr group. */
+.cm-s-golden .CodeMirror-gutters {
+    background: #231c14 /* bistre */;
+    border: none;
+}
+.cm-s-golden .CodeMirror-linenumber { color: #fbec5d /* lemon_meringue */; }
+
+.cm-s-golden .CodeMirror-guttermarker { color: #f63f05 /* cinnabar */; }
+
+/* Roughly equivalent to Vim's FoldColumn group. */
+.cm-s-golden .CodeMirror-guttermarker-subtle { color: #fbb32f /* marigold */; }
+
+/*
+* Roughly equivalent to Vim's CursorColumn group. (We use a brighter color
+* since Vim's cursorcolumn option highlights a whole column, whereas
+* CodeMirror's rule just highlights a thin line.)
+*/
+.cm-s-golden .CodeMirror-ruler { border-color: #745d42 /* cocoa */; }
+
+/* Equivalent to Vim's Cursor group in insert mode. */
+.cm-s-golden .CodeMirror-cursor { border-color: #a0ea00 /* chartreuse */; }
+
+/* Equivalent to Vim's Cursor group in normal mode. */
+.cm-s-golden.cm-fat-cursor .CodeMirror-cursor,
+.cm-s-golden .cm-animate-fat-cursor {
+    /*
+    * CodeMirror doesn't allow changing the foreground color of the character
+    * under the cursor, so we can't use a reverse video effect for the cursor.
+    * Instead, make it semitransparent.
+    */
+    background: rgba(160, 234, 0, 0.5) /* chartreuse */;
+}
+.cm-s-golden.cm-fat-cursor .CodeMirror-cursors {
+    /*
+    * Boost the z-index so the fat cursor shows up on top of text and
+    * matchingbracket/matchingtag highlights.
+    */
+    z-index: 3;
+}
+
+/* Equivalent to Vim's Cursor group in replace mode. */
+.cm-s-golden .CodeMirror-overwrite .CodeMirror-cursor {
+    border-bottom: 1px solid #a0ea00 /* chartreuse */;
+    border-left: none;
+    width: auto;
+}
+
+/* Roughly equivalent to Vim's CursorIM group. */
+.cm-s-golden .CodeMirror-secondarycursor {
+    border-color: #00ff7f /* seafoam_green */;
+}
+
+/* Roughly equivalent to Vim's Visual group. */
+.cm-s-golden .CodeMirror-selected,
+.cm-s-golden.CodeMirror-focused .CodeMirror-selected {
+    background: #273900 /* dark_olive */;
+}
+.cm-s-golden .CodeMirror-line::selection,
+.cm-s-golden .CodeMirror-line > span::selection,
+.cm-s-golden .CodeMirror-line > span > span::selection {
+    background: #273900 /* dark_olive */;
+}
+
+/* Equivalent to Vim's Search group. */
+.cm-s-golden .cm-searching {
+    background: #fef3b4 /* vanilla_cream */ !important;
+    color: #231c14 /* bistre */ !important;
+}
+
+.cm-s-golden span.cm-comment { color: #fbb32f; font-style: italic;}
+.cm-s-golden span.cm-mental-load { color: #FF80E1; }
+.cm-s-golden span.cm-time-load { color: #9EFFFF; }
+.cm-s-golden span.cm-task-amount { color: #ab6af5; }
+.cm-s-golden span.cm-task { color: rgb(0, 255, 85); }
+
+/* Style addons: */
+
+/* Equivalent to Vim's MatchParen group. */
+.cm-s-golden span.CodeMirror-matchingbracket {
+    background: #745d42 /* cocoa */ !important;
+    color: #231c14 /* bistre */ !important;
+    font-weight: bold;
+}
+
+/*
+* Roughly equivalent to Vim's Error group. (Vim doesn't seem to have a direct
+* equivalent in its own matchparen plugin, but many syntax highlighting plugins
+* mark mismatched brackets as Error.)
+*/
+.cm-s-golden span.CodeMirror-nonmatchingbracket {
+    background: #d80450 /* crimson */ !important;
+    color: #231c14 /* bistre */ !important;
+}
+
+.cm-s-golden .CodeMirror-matchingtag,
+.cm-s-golden .cm-matchhighlight {
+    outline: 1px solid #39a78d /* zomp */;
+}
+
+/* Equivalent to Vim's CursorLine group. */
+.cm-s-golden .CodeMirror-activeline-background,
+.cm-s-golden .CodeMirror-activeline-gutter {
+    background: #3c3022 /* chocolate */;
+}
+
+/* Equivalent to Vim's CursorLineNr group. */
+.cm-s-golden .CodeMirror-activeline-gutter .CodeMirror-linenumber {
+    color: #d8ff84 /* pastel_chartreuse */;
+    font-weight: bold;
+}
+
+/* Roughly equivalent to Vim's Folded group. */
+.cm-s-golden .CodeMirror-foldmarker {
+    color: #f63f05 /* cinnabar */;
+    text-shadow: none;
+}

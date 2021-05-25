@@ -1,0 +1,17 @@
+
+.golden {
+    --color-font: #fbec5d;
+    --color-font-hover: #fbb32f;
+
+    --color-bg: #4b3d36;
+    --color-container: #231c14;
+    --color-border: #6d6d6d;
+    
+    --color-button-text: #fbec5d;
+    --color-button-bg: #4b3d36;
+
+    --color-button-active-text: #4b3d36;
+    --color-button-active-bg: #fbec5d;
+
+    --color-link: #fbb32f;
+}
