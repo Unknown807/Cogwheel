@@ -1,0 +1,17 @@
+
+.bliss {
+    --color-font: #FFD0D0;
+    --color-font-hover: #e4bcbcc4;
+
+    --color-bg: #77498a;
+    --color-container: #4B164C;
+    --color-border: #a669c0;
+
+    --color-button-text: #b1b8fb;
+    --color-button-bg: #4B164C;
+
+    --color-button-active-text: #4B164C;
+    --color-button-active-bg: #b1b8fb;
+
+    --color-link: #b1b8fb;
+}

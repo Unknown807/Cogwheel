@@ -2,7 +2,8 @@
 
 function saveEditorContent() {
     let content = codemirror_editor.getValue();
-    window.api.send("saveEditorContent", content);
+    let title = $("#filename-input").val();
+    window.api.send("saveEditorContent", content, title);
 }
 
 $("#settings-button").on("click", () => {

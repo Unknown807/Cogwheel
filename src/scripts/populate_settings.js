@@ -5,6 +5,8 @@ let inputs = [
     "hear", "say", "search", "response",
 ]
 
+let currentTheme = "light";
+
 $(window).on("load", () => {
     window.api.send("requestSettings");
 });

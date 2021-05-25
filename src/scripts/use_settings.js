@@ -9,4 +9,5 @@ window.api.receive("receiveSettings", (arr) => {
     document.documentElement.className = arr[16];
     codemirror_editor.setOption("theme", arr[16]);
     codemirror_editor.setValue(arr[17]);
+    $("#filename-input").val(arr[18]);
 });

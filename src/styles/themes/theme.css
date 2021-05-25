@@ -1,5 +1,6 @@
 @import url("light.css");
 @import url("dark.css");
+@import url("bliss.css");
 
 body {
     background-color: var(--color-bg);
@@ -21,4 +22,30 @@ body {
 .theme-font:hover {
     transition: 0.5s;
     color: var(--color-font-hover) !important;
+}
+
+.theme-button {
+    color: var(--color-button-text);
+    background-color: var(--color-button-bg);
+    border-color: var(--color-button-text);
+}
+
+.theme-button:hover {
+    transition: 0.5s;
+    color: var(--color-button-active-text);
+    background-color: var(--color-button-active-bg);
+}
+
+.theme-button-active {
+    color: var(--color-button-active-text);
+    background-color: var(--color-button-active-bg);   
+    border-color: var(--color-button-active-bg);
+}
+
+.theme-button-active:hover {
+    color: var(--color-button-active-text);
+}
+
+.theme-link {
+    color: var(--color-link) !important;
 }

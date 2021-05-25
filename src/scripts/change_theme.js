@@ -1,20 +1,13 @@
-let currentTheme = "light";
-
-/* For other themes
-$("#").on("click", () => {
-    
-});
-*/
 
 function setTheme(newTheme) {
     let oldToggle = $(`#${currentTheme}-mode-toggle`);
     let newToggle = $(`#${newTheme}-mode-toggle`);
 
-    oldToggle.removeClass("btn-primary");
-    oldToggle.addClass("btn-outline-primary");
+    oldToggle.removeClass("theme-button-active");
+    oldToggle.addClass("theme-button");
     
-    newToggle.removeClass("btn-outline-primary");
-    newToggle.addClass("btn-primary");
+    newToggle.removeClass("theme-button");
+    newToggle.addClass("theme-button-active");
 
     currentTheme = newTheme;
     document.documentElement.className = newTheme;
@@ -26,4 +19,8 @@ $("#light-mode-toggle").on("click", () => {
 
 $("#dark-mode-toggle").on("click", () => {
     setTheme("dark");
+});
+
+$("#bliss-mode-toggle").on("click", () => {
+    setTheme("bliss");
 });

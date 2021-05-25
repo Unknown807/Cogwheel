@@ -5,6 +5,7 @@ const fs = require("fs");
 let win;
 let currentFilePath = __dirname;
 let currentEditorContent = "";
+let currentEditorFilename = "";
 
 const defaultSettings = [
   //Motor - click, hands, point, type, write
@@ -93,6 +94,7 @@ ipcMain.on("requestSettings", (event) => {
   }
   
   data.push(currentEditorContent);
+  data.push(currentEditorFilename);
 
   win.webContents.send("receiveSettings", data);
 });
@@ -111,8 +113,9 @@ ipcMain.on("saveSettings", (event, settings) => {
   fs.writeFileSync(path.join(__dirname, "settings.txt"), data, "utf-8");
 });
 
-ipcMain.on("saveEditorContent", (event, content) => {
+ipcMain.on("saveEditorContent", (event, content, filename) => {
   currentEditorContent = content;
+  currentEditorFilename = filename;
 });
 
 app.on('window-all-closed', () => {

@@ -6,4 +6,12 @@
     --color-bg: #1E2228;
     --color-container: #22272E;
     --color-border: #6d6d6d;
+    
+    --color-button-text: #0B5ED7;
+    --color-button-bg: black;
+
+    --color-button-active-text: white;
+    --color-button-active-bg: #0B5ED7;
+
+    --color-link: #0B5ED7;
 }

@@ -3,9 +3,9 @@ function saveCurrentFile() {
     let filename = $("#filename-input").val();
     let data = codemirror_editor.getValue();
     window.api.send("saveCurrentFile", filename, data);
-    $("#save-file-button").css("color", "green");
+    $("#save-file-button").attr('style', 'color: green !important');
     setTimeout(() => {
-        $("#save-file-button").css("color", "");
+        $("#save-file-button").attr("style", "");
     }, 250);
 }
 

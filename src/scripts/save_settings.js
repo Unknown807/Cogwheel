@@ -5,7 +5,6 @@ $("#back-button").on("click", () => {
         settings.push($(`#${inputs[i]}-input`).val());
     }
     settings.push(currentTheme);
-    // Add theme to settings list as well
 
     window.api.send("saveSettings", settings);
     window.location.href = "index.html";
