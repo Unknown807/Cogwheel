@@ -5,44 +5,191 @@
     <title>Cogwheel - Simple Cognitive Calculator</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../styles/themes/theme.css"/>
+    <link rel="stylesheet" href="../styles/sidebar_and_content.css"/>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="theme-container navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <span class="navbar-brand">
+            <span class="navbar-brand theme-font">
                 <svg width="32" height="32">
                     <use href="../styles/icons/bootstrap-icons.svg#people"/>
                 </svg>
                 Cognitive Calculator
             </span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler theme-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="theme-font">
+                    <svg width="32" height="32">
+                        <use href="../styles/icons/bootstrap-icons.svg#list"/>
+                    </svg>
+                </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <span id="back-button" class="nav-link theme-font">
                             <svg width="24" height="24">
                                 <use href="../styles/icons/bootstrap-icons.svg#arrow-left-circle"/>
                             </svg>
                             Go Back
-                        </a>
+                        </span>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="m-4">
-        <h1>This is where the help/documentation will be</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="help-sidebar" class="theme-container col-2 d-flex flex-column flex-shrink-0">
+                <hr class="theme-font"/>
+                <a class="theme-font text-center link-dark text-decoration-none">
+                    <svg width="32" height="32">
+                        <use href="../styles/icons/bootstrap-icons.svg#bookmark"/>
+                    </svg>
+                    <span class="fs-4">Contents</span>
+                </a>
+                <hr class="theme-font"/>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a href="#intro-fragment" class="theme-link nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#dot"/>
+                            </svg>
+                            Introduction
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#work-fragment" class="theme-link nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#dot"/>
+                            </svg>
+                            How It Works
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#files-fragment" class="theme-link nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#dot"/>
+                            </svg>
+                            Files
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings-fragment" class="theme-link nav-link fs-6">
+                            <svg width="24" height="24">
+                                <use href="../styles/icons/bootstrap-icons.svg#dot"/>
+                            </svg>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="help-box" class="col-10">
+
+                <div>
+                    <a name="intro-fragment" class="theme-font link-dark text-decoration-none fs-2">Introduction</a>
+                    <hr class="theme-font"/>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <p class="theme-font">
+                                    Welcome to Cogwheel a simple cognitive calculator based roughly on KLM-GOMS (Keystroke Level Model - <br/>
+                                    Goals Operators Methods Selection Rules), with the design made similar to an existing program called <br/>
+                                    Cogulator.                                                                                           <br/>
+                                </p>
+                                <p class="theme-font">
+                                    The purpose of the program is to calculate how long a series of tasks when done by an expert user would <br/>
+                                    take and how much the user would have to rememeber as well (e.g mental maths). Normally in KLM-<br/>
+                                    GOMS users making errors is not taken into account, but Cogwheel has the <span class="text-danger">Forget</span> keyword to account<br/>
+                                    for things like memory loss. So some consideration has been made for errors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <a name="work-fragment" class="theme-font link-dark text-decoration-none fs-2">How It Works</a>
+                    <hr class="theme-font"/>
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 ">
+                            <div class="col">
+                                <p class="theme-font">
+                                    The way the <span class="text-danger">total time</span> for a series of tasks to complete is calculated is by counting up all the    <br/>
+                                    seconds and milliseconds written in the editor and then displaying it above next to the clock icon. <br/>
+                                    The program also watches out for <span class="text-danger"><2></span> like this in brackets as a multiplier for a task, so in this   <br/>
+                                    case the 2 with an action taking 100 milliseconds would be 200 milliseconds. In case the time is not<br/>
+                                    mentioned next to the task, the program uses the default times that you either changed in the       <br/>
+                                    settings file or if the settings file doesn't exist it uses hardcoded default values.
+                                </p>
+                                <p class="theme-font">
+                                    Chunks are made by individuals to better memorise something, chunking is a phenomenon whereby an      <br/>
+                                    individual groups responses when performing a memory task. For example a phone number like 123456789  <br/>
+                                    when chunked can become 123-456-789.                                                                  <br/>
+                                                                                                                                          <br/>
+                                    So the way <span class="text-danger">total chunks</span> are calculated is by counting the maximum amount of chunks a user has to store<br/>
+                                    at any one point throughout the defined series of tasks and the use of the <span class="text-danger">Forget</span> keyword will reset the <br/>
+                                    counter to see if any tasks later will require the user to store more information than before.        <br/>
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <a name="files-fragment" class="theme-font link-dark text-decoration-none fs-2">Files</a>
+                    <hr class="theme-font"/>
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 ">
+                            <div class="col">
+                                <p class="theme-font">
+                                    By default the editor is empty so you can start typing immediately, if not you can always create a new<br/>
+                                    file (which will overwrite the editor). You can also open saved files from anywhere on your computer, <br/>
+                                    even though your files will be saved in the program directory most of the time. When you do want to   <br/>
+                                    save a file, just press the save file button on the toolbar. For a successful save make sure to name  <br/>
+                                    your file appropriately with letters and numbers, otherwise you will get an error popup. You will know<br/>
+                                    if you saved your file when the save button lights up in green for a second.                          <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 mb-5">
+                    <a name="settings-fragment" class="theme-font link-dark text-decoration-none fs-2">Settings</a>
+                    <hr class="theme-font"/>
+                    <div class="container-fluid">
+                        <div class="row row-cols-3 ">
+                            <div class="col">
+                                <p class="theme-font"><!--xx col                                                                          <br/> here -->
+                                    The settings page allows you to change the default time it takes to complete certain tasks in seconds.<br/>
+                                    So if you know a <span class="text-danger">Click</span> will almost always take 200ms for you, you would write in the text field for   <br/>
+                                    the <span class="text-danger">Click</span> keyword '0.2'. At the bottom of the page you also have a number of themes you can select for<br/>
+                                    the program.                                                                                                                           <br/>
+                                </p>
+                                <p class="theme-font"><!--xx col                                                                          <br/> here -->
+                                    When you're finished making changes you can either click the back button which will take you to editor<br/>
+                                    page and will automatically save your changed settings or you can always click the 'save settings'    <br/>
+                                    button manually.                                                                                      <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/use_settings_help.js"></script>
+    <script src="../scripts/help.js"></script>
 
 </body>
 </html>

@@ -22,8 +22,8 @@ const defaultSettings = [
 
 function createWindow () {
   win = new BrowserWindow({
-    width: 1200,
-    height: 900,
+    width: 1024,
+    height: 768,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -32,6 +32,7 @@ function createWindow () {
     }
   })
 
+  win.removeMenu();
   win.loadFile(path.join(__dirname, '/content/index.html'));
 };
 
