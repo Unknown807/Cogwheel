@@ -22,6 +22,7 @@ const defaultSettings = [
 
 function createWindow () {
   win = new BrowserWindow({
+    icon: path.join(__dirname, "/styles/icons/logo.ico"),
     width: 1024,
     height: 768,
     webPreferences: {
