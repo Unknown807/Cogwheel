@@ -1,0 +1,19 @@
+/*Using TextMate's blackboard theme for editor*/
+
+.cm-s-dark.CodeMirror { background: #0C1021; color: #F8F8F8; }
+.cm-s-dark div.CodeMirror-selected { background: #253B76; }
+.cm-s-dark .cm-s-dark .CodeMirror-line > span::selection, .cm-s-dark .CodeMirror-line > span > span::selection { background: #2B3776; }
+.cm-s-dark .CodeMirror-gutters { background: #0C1021; border-right: 0; }
+.cm-s-dark .CodeMirror-guttermarker { color: #FBDE2D; }
+.cm-s-dark .CodeMirror-guttermarker-subtle { color: #888; }
+.cm-s-dark .CodeMirror-linenumber { color: #888; }
+.cm-s-dark .CodeMirror-cursor { border-left: 1px solid #A7A7A7; }
+
+.cm-s-dark span.cm-comment { color: grey; }
+.cm-s-dark span.cm-mental-load { color: blueviolet; }
+.cm-s-dark span.cm-time-load { color: green; }
+.cm-s-dark span.cm-task-amount { color: #36B8AB; }
+.cm-s-dark span.cm-task { color: red; }
+
+.cm-s-dark .CodeMirror-activeline-background { background: #3C3636; }
+.cm-s-dark .CodeMirror-matchingbracket { outline:1px solid grey;color:white !important; }
