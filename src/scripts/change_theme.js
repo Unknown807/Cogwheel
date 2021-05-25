@@ -33,3 +33,7 @@ $("#mdn-like-mode-toggle").on("click", () => {
 $("#golden-mode-toggle").on("click", () => {
     setTheme("golden");
 });
+
+$("#zenburn-mode-toggle").on("click", () => {
+    setTheme("zenburn");
+});

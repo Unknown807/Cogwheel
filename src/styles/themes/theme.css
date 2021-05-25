@@ -3,6 +3,7 @@
 @import url("bliss.css");
 @import url("mdn-like.css");
 @import url("golden.css");
+@import url("zenburn.css");
 
 body {
     background-color: var(--color-bg);

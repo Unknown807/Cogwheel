@@ -1,0 +1,17 @@
+
+.zenburn {
+    --color-font: #cc9393;
+    --color-font-hover: #d1b7b7;
+
+    --color-bg: #292929;
+    --color-container: #3f3f3f;
+    --color-border: #cc9393;
+    
+    --color-button-text: #ffbfbf;
+    --color-button-bg: #292929;
+
+    --color-button-active-text: #292929;
+    --color-button-active-bg: #ffbfbf;
+
+    --color-link: #ffbfbf;
+}
