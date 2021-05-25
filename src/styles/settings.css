@@ -9,6 +9,7 @@
     height: calc( 100vh - 66px );
 }
 
+#save-button,
 #back-button {
     cursor: pointer;
 }
