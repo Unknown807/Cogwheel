@@ -1,4 +1,6 @@
-/*Using TextMate's blackboard theme for editor*/
+/*
+    Using TextMate's blackboard theme for editor
+*/
 
 .cm-s-dark.CodeMirror { background: #0C1021; color: #F8F8F8; }
 .cm-s-dark div.CodeMirror-selected { background: #253B76; }

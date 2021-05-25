@@ -11,6 +11,7 @@ function setTheme(newTheme) {
 
     currentTheme = newTheme;
     document.documentElement.className = newTheme;
+    console.log(document.documentElement.className);
 }
 
 $("#light-mode-toggle").on("click", () => {
@@ -23,4 +24,8 @@ $("#dark-mode-toggle").on("click", () => {
 
 $("#bliss-mode-toggle").on("click", () => {
     setTheme("bliss");
+});
+
+$("#mdn-like-mode-toggle").on("click", () => {
+    setTheme("mdn-like");
 });

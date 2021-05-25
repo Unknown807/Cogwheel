@@ -2,7 +2,7 @@
 .cm-s-bliss.CodeMirror { background: #4B164C; color: #FFD0D0; }
 .cm-s-bliss div.CodeMirror-selected { background: #77498a; }
 .cm-s-bliss .cm-s-bliss .CodeMirror-line > span::selection, .cm-s-bliss .CodeMirror-line > span > span::selection { background: #77498a; }
-.cm-s-bliss .CodeMirror-gutters { background: #2B092A; border-right: 0; }
+.cm-s-bliss .CodeMirror-gutters { background: #2B092A; border-right: 1px dashed #C306CF; }
 .cm-s-bliss .CodeMirror-guttermarker { color: #2B092A; }
 .cm-s-bliss .CodeMirror-guttermarker-subtle { color: #C306CF; }
 .cm-s-bliss .CodeMirror-linenumber { color: #C306CF; }
