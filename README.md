@@ -2,7 +2,7 @@
 
 ## Description
 
-An electron simple cognitive calculator program based roughly on the KLM-GOMS cognitive model https://en.wikipedia.org/wiki/Keystroke-level_model. It allows you to calculate how long it would take an expert user with no errors to complete a series of tasks, allowing you to flexibly specify how long each task takes, how much the user would have to memorise and how many times the task is to be repeated.
+An electron simple cognitive calculator program based roughly on the <a href="https://en.wikipedia.org/wiki/Keystroke-level_model">KLM-GOMS cognitive model</a>. It allows you to calculate how long it would take an expert user with no errors to complete a series of tasks, allowing you to flexibly specify how long each task takes, how much the user would have to memorise and how many times the task is to be repeated.
 
 ## Attributions
 
